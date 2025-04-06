@@ -1,0 +1,99 @@
+<html>
+<head>
+   <title>Customer Churn Prediction</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         margin: 20px;
+         padding: 20px;
+      }
+      .container {
+         width: 60%;
+         margin: auto;
+      }
+      .form-group {
+         margin-bottom: 15px;
+      }
+      label {
+         display: block;
+         font-weight: bold;
+      }
+      input {
+         width: 100%;
+         padding: 8px;
+         margin-top: 5px;
+      }
+      .btn {
+         background-color: blue;
+         color: white;
+         padding: 10px 15px;
+         border: none;
+         cursor: pointer;
+         width: 100%;
+         margin-top: 10px;
+      }
+      .btn:hover {
+         background-color: darkblue;
+      }
+      .output {
+         margin-top: 20px;
+         padding: 10px;
+         border: 1px solid #ccc;
+         background-color: #f9f9f9;
+      }
+   </style>
+</head>
+<body>
+   <div class="container">
+      <h2>Customer Churn Prediction</h2>
+      <form action="http://localhost:5000/" method="POST">
+         <div class="form-group">
+            <label for="query1">Credit Score:</label>
+            <input type="text" id="query1" name="query1" value="{{query1}}">
+         </div>
+         <div class="form-group">
+            <label for="query2">Geography:</label>
+            <input type="text" id="query2" name="query2" value="{{query2}}">
+         </div>
+         <div class="form-group">
+            <label for="query3">Gender:</label>
+            <input type="text" id="query3" name="query3" value="{{query3}}">
+         </div>
+         <div class="form-group">
+            <label for="query4">Age:</label>
+            <input type="text" id="query4" name="query4" value="{{query4}}">
+         </div>
+         <div class="form-group">
+            <label for="query5">Tenure:</label>
+            <input type="text" id="query5" name="query5" value="{{query5}}">
+         </div>
+         <div class="form-group">
+            <label for="query6">Balance:</label>
+            <input type="text" id="query6" name="query6" value="{{query6}}">
+         </div>
+         <div class="form-group">
+            <label for="query7">Num of Products:</label>
+            <input type="text" id="query7" name="query7" value="{{query7}}">
+         </div>
+         <div class="form-group">
+            <label for="query8">Has Credit Card (0/1):</label>
+            <input type="text" id="query8" name="query8" value="{{query8}}">
+         </div>
+         <div class="form-group">
+            <label for="query9">Is Active Member (0/1):</label>
+            <input type="text" id="query9" name="query9" value="{{query9}}">
+         </div>
+         <div class="form-group">
+            <label for="query10">Estimated Salary:</label>
+            <input type="text" id="query10" name="query10" value="{{query10}}">
+         </div>
+         <button type="submit" class="btn">Predict</button>
+      </form>
+      <div class="output">
+         <h4>Prediction Result:</h4>
+         <p>{{ output1 }}</p>
+         <p>{{ output2 }}</p>
+      </div>
+   </div>
+</body>
+</html>
